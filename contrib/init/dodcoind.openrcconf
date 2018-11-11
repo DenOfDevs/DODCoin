@@ -1,0 +1,26 @@
+# /etc/conf.d/dodcoind: config file for /etc/init.d/dodcoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/dodcoin/dodcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/dodcoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/dodcoind.pid"
+
+# Where to write dodcoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/dodcoind"
+
+# User and group to own dodcoind process
+#BITCOIND_USER="dodcoin"
+#BITCOIND_GROUP="dodcoin"
+
+# Path to dodcoind executable
+#BITCOIND_BIN="/usr/bin/dodcoind"
+
+# Nice value to run dodcoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

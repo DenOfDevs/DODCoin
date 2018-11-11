@@ -1,0 +1,11 @@
+[Protocol]
+exec=dodcoin-qt '%u'
+protocol=dodcoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

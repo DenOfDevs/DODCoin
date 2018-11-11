@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=DODcoin
+Comment=DODcoin P2P Cryptocurrency
+Comment[fr]=DODcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=DODcoin, eşten eşe kriptografik sanal para birimi
+Exec=dodcoin-qt %u
+Terminal=false
+Type=Application
+Icon=dodcoin128
+MimeType=x-scheme-handler/dodcoin;
+Categories=Office;Finance;

@@ -1,0 +1,2 @@
+usr/local/bin/dodcoind usr/bin
+usr/local/bin/dodcoin-cli usr/bin

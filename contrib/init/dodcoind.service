@@ -1,0 +1,26 @@
+[Unit]
+Description=DODcoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=dodcoin
+Group=dodcoin
+
+Type=forking
+PIDFile=/var/lib/dodcoind/dodcoind.pid
+
+ExecStart=/usr/bin/dodcoind -daemon -pid=/var/lib/dodcoind/dodcoind.pid \
+          -conf=/etc/dodcoin/dodcoin.conf -datadir=/var/lib/dodcoind
+
+ExecStop=-/usr/bin/dodcoin-cli -conf=/etc/dodcoin/dodcoin.conf \
+         -datadir=/var/lib/dodcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
