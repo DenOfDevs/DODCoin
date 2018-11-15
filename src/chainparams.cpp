@@ -149,7 +149,7 @@ public:
         nMaxMoneyOut = 2000000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 300;
+        nLastPOWBlock = 500;
         nModifierUpdateBlock = 999999999;
         nZerocoinStartHeight = 301;
         nAccumulatorStartHeight = 1;
@@ -190,7 +190,9 @@ public:
         assert(hashGenesisBlock == uint256("00000797e0cbd087ee2735c6021e0ac29d14ab4a271e313da0e491998d1e6c53"));
         assert(genesis.hashMerkleRoot == uint256("1703a4d60fa5fc75a05c82e3380d2e6aa28b8e83ed6dd8a75288fad93b256998"));
 
-    	vSeeds.push_back(CDNSSeedData("0.0.0.0", "0.0.0.0")); //No node
+    	vSeeds.push_back(CDNSSeedData("217.163.11.120", "217.163.11.120")); //1st Node
+        vSeeds.push_back(CDNSSeedData("108.61.99.51", "108.61.99.51")); //2nd Node
+        vSeeds.push_back(CDNSSeedData("207.246.91.17", "207.246.91.17")); //3rd Node
         
         
 
@@ -205,7 +207,7 @@ public:
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
         fRequireRPCPassword = true;
-        fMiningRequiresPeers = false;
+        fMiningRequiresPeers = true;
         fAllowMinDifficultyBlocks = true;
         fDefaultConsistencyChecks = false;
         fRequireStandard = false;
@@ -354,7 +356,7 @@ public:
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
 
         fRequireRPCPassword = false;
-        fMiningRequiresPeers = false;
+        fMiningRequiresPeers = true;
         fAllowMinDifficultyBlocks = true;
         fDefaultConsistencyChecks = true;
         fRequireStandard = false;
@@ -383,7 +385,7 @@ public:
         vSeeds.clear();      //! Unit test mode doesn't have any DNS seeds.
 
         fRequireRPCPassword = false;
-        fMiningRequiresPeers = false;
+        fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = true;
         fAllowMinDifficultyBlocks = false;
         fMineBlocksOnDemand = true;
